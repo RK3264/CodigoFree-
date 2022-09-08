@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class ADT2D<E> {
-    private ArrayList<E> ren, col, aux;
+    private ArrayList<E> ren, aux;
     private int numRenglones, numColumnas;
     
     public ADT2D(int a, int b){    
@@ -17,9 +17,9 @@ public class ADT2D<E> {
     public void clear(E dato){
         for(int i=0; i<numRenglones ; i++){
             for(int j=0 ; j<numColumnas ; j++){
-                col.set(j,dato);
+                aux.set(j,dato);
             }
-            ren.set(i, (E) col);
+            ren.set(i, (E) aux);
         }
     }
     public void setElement(int a,int b,E dato){
